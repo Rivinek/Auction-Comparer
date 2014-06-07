@@ -1,0 +1,11 @@
+<html>
+    <head><link type="text/css" rel="stylesheet" href="/stylesheets/main.css" /></head>
+    <body>
+            {% for name,date, url in my_history %}
+                {% if name %}
+                   <pre><hr> {{name}}         {{date}}       <a href="{{url}}">{{url}}</a></hr></pre>
+
+                {% endif %}
+            {% endfor %}
+    </body>
+</html>

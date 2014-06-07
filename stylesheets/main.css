@@ -1,0 +1,96 @@
+body {
+  background-color: #FFFFFF;
+}
+.together {
+    top:40%;
+    left:31%;
+}
+.title {
+    margin-top:4%%;
+    font-size:30pt;     
+}
+
+#title {
+    font-size: 40pt;
+}
+
+.allegro {
+    position:absolute;
+    top:40%;
+    left:31%;
+}
+.allegro h1 {
+    font-size:30pt;
+    top:60%;
+    left:31%;
+}
+
+.allegro h2 {
+    font-size:20pt;
+}
+
+.nokaut {
+    position:absolute;
+    top:37%;
+    right:28%;
+}
+
+.nokaut h1 {
+    font-size:30pt;
+    top:60%;
+    right:28%;
+}
+
+.nokaut h2 {
+    font-size:20pt;
+}
+
+.login {
+    margin-left:90%;
+}
+
+.light1 {
+    margin-left:-70% }
+
+.light2 {
+    margin-left: 50%;
+}
+
+
+.most_popular {
+    margin-top:1%;
+    text-align: right;
+    margin-right:5%;
+}
+
+.most_logo {
+    margin-top:5%;
+    text-align: right;
+    margin-right:4%;
+}
+
+#keyword {
+    height: 2.25em;
+    width: 500px;
+    font-size:15px;
+}
+
+.login a:link, a:visited{
+    text-decoration: none;
+    color: #404040;
+}
+
+.login a:hover {
+    text-decoration: underline 
+}
+
+#button1 {
+    margin-top:1%;
+    width:100px;
+    font-size:20px;
+}
+
+#button2 {
+    width:100px;
+    font-size:20px;
+}

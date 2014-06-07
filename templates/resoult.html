@@ -1,0 +1,33 @@
+<html>
+    <head>
+  	    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+        <script src="stylesheets/js/jquery-1.10.2.min.js"></script>
+        <script src="stylesheets/js/lightbox-2.6.min.js"></script> 
+        <link href="stylesheets/css/lightbox.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="all">
+        <div id="title"><center>{{ prod_name }} </center></div>
+        <div class="together">      
+        <div class="allegro">
+            <a id='img_all' href="{{ img_allegro }}" data-lightbox="image-1" >
+            <img src="{{img_mini_allegro}}"</img></a> 
+            <h1>Allegro:</h1>
+            <h2>Product url: 
+                    <a href="{{ allegro_url }}"><img src="/stylesheets/img/allegro.png"></img></a> 
+                </h2>            
+                <h3>Product price: {{ allegro_price }} zł </h3>  
+        </div>
+        <div class="nokaut">
+            <a id='img_nokaut' href="{{ img_nokaut }}" data-lightbox="image-2" >
+            <img src="{{img_mini_nokaut}}"</img></a> 
+            <h1>Nokaut:</h1>
+            <h2>Product url: 
+                    <a href="{{ nokaut_url }}"><img src="/stylesheets/img/nokaut.png"></img></a> 
+            </h2>
+            <h3>Product price: {{ nokaut_price }} zł </h3>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>

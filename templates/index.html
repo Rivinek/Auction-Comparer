@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="stylesheets/js/jquery-1.10.2.min.js"></script>
+        <script src="stylesheets/js/lightbox-2.6.min.js"></script> 
+        <link href="stylesheets/css/lightbox.css" rel="stylesheet" />
+        <script>
+        function search(){ 
+            $.ajax({ 
+             url: "/compare",
+             type:"post",
+             data: {'keyword': $('#keyword').val() },
+             beforeSend: function() {
+                document.getElementById("button1").disabled = true;
+                $('#data').html("<img src='/stylesheets/ajax-loader.gif' />");
+             },
+
+             success: function(data){
+                document.getElementById("button1").disabled = false;
+                $('#data').html('<p>'+data+'</p>')}, 
+             error: function() { 
+                document.getElementById("button1").disabled = false;
+                alert("Please input correct data");
+            $.ajax({
+                url: "",
+                context: document.body,
+                success: function(s,x){
+                    $(this).html(s);
+                }
+            });}  
+    }); } 
+    </script>
+    </head>
+    <body>
+        <div class="login"><a href="{{ url }}">{{ url_linktext }}</a></div> 
+        <div class ="title"><center><img src="/stylesheets/img/logo2.png" alt="Logo2"></center></div> 
+        <div id ="form1">
+            <form action="/compare?{{ pod_name }}"  method="post">
+                <center><input id="keyword" type="text" name="content" ><br>
+                <input id="button1" type="submit" onclick="search(); return false"  value="Compare">
+                </center>  
+            </form> 
+        </div>
+        <div id="form2">
+            <form action="/history" method="post" >
+                <center>
+                    <input id="button2" type="submit" value="History">
+                </center>
+            </form>      
+        </div>  
+        <center><div id="data"></div></center>  
+            <div class='most_logo'><img src="/stylesheets/img/most_popular.png" alt="Most popular"><div>
+            <div class="most_popular">
+                {% for item in item_counter %}
+                    <br>
+                    <a href="{{ item.0 }}" data-lightbox="image-3">
+                    <img src="{{ item.1 }}"></img></a>
+                    </br>
+                {% endfor%}               
+            </div>
+
+        </div> 
+    </body>
+</html>
